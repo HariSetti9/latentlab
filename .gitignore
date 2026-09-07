@@ -1,4 +1,5 @@
 node_modules/
+.pnpm-store/
 dist/
 coverage/
 playwright-report/
@@ -8,6 +9,7 @@ test-results/
 !.env.example
 __pycache__/
 *.py[cod]
+*.tsbuildinfo
 .venv/
 .DS_Store
 Thumbs.db

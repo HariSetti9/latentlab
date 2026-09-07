@@ -27,11 +27,11 @@ Legend: `[x]` complete, `[ ]` pending, `[!]` blocked on user/external authorizat
 
 ## Phase 3 - Computational substrate
 
-- [ ] Pre-register experiment hypotheses and fixtures.
-- [ ] Implement fixed-state recurrence and separate BFS truth.
-- [ ] Add deterministic evaluation, unit tests, model card, metrics, and checksums.
-- [ ] Verify normal and honest limitation cases.
-- [ ] Reproduce central interaction without UI.
+- [x] Pre-register experiment hypotheses and fixtures.
+- [x] Implement fixed-state recurrence and separate BFS truth.
+- [x] Add deterministic evaluation, unit tests, model card, metrics, and checksums.
+- [x] Verify normal and honest limitation cases.
+- [x] Reproduce central interaction without UI.
 
 ## Phase 4 - Interactive artifact
 
