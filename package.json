@@ -2,17 +2,22 @@
   "name": "latentlab-dataforge-2026",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.19.0",
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
+    "checksums": "node scripts/generate-checksums.mjs",
     "check:citations": "node scripts/check-citations.mjs",
+    "check:hygiene": "node scripts/check-hygiene.mjs",
     "evaluate": "tsx scripts/evaluate.ts",
     "find:puzzles": "tsx scripts/find-interesting-puzzles.ts",
     "dev": "vite",
     "lint": "eslint .",
+    "reproduce": "node scripts/reproduce.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc -b --pretty false"
+    "typecheck": "tsc -b --pretty false",
+    "verify:presets": "tsx scripts/verify-presets.ts"
   },
   "dependencies": {
     "react": "^19.1.1",

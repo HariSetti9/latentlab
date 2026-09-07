@@ -65,6 +65,13 @@ describe('interactive learning experience', () => {
     expect(screen.getByTestId('plain-summary')).toHaveTextContent('At depth 2');
   });
 
+  it('exposes the research module as a deterministic hash route', () => {
+    window.history.replaceState({}, '', '/#evidence');
+    render(<App />);
+    expect(screen.getByRole('heading', { name: /Where the toy connects/ })).toBeVisible();
+    expect(window.location.hash).toBe('#evidence');
+  });
+
   it('keeps sandbox start and goal valid when wall mode targets them', async () => {
     const user = userEvent.setup();
     render(<App />);

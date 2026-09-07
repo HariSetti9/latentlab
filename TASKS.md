@@ -47,10 +47,10 @@ Legend: `[x]` complete, `[ ]` pending, `[!]` blocked on user/external authorizat
 
 ## Phase 6 - Evaluation and learning test
 
-- [ ] Run fixed iteration sweep and item-level truth comparison.
-- [ ] Verify state changes and browser/reference parity.
-- [ ] Document results, limitations, exact commands, and 60-second protocol.
-- [ ] Perform clean-install reproduction.
+- [x] Run fixed iteration sweep and item-level truth comparison.
+- [x] Verify state changes and browser/reference parity.
+- [x] Document results, limitations, exact commands, and 60-second protocol.
+- [x] Perform clean-install reproduction.
 
 ## Phase 7 - Submission documentation
 

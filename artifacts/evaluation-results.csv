@@ -1,0 +1,81 @@
+puzzleId,construction,gridRows,gridColumns,obstacleDensity,depth,oracleReachable,oracleDistance,predictedReachable,predictedDistance,correct,changedCellsFinalStep,stableAtStep,computeProxy
+"easy-corridor","showcase preset",3,3,0.2222,0,true,2,false,,false,0,,0
+"easy-corridor","showcase preset",3,3,0.2222,1,true,2,false,,false,1,,7
+"easy-corridor","showcase preset",3,3,0.2222,2,true,2,true,2,true,1,,14
+"easy-corridor","showcase preset",3,3,0.2222,4,true,2,true,2,true,1,,28
+"easy-corridor","showcase preset",3,3,0.2222,6,true,2,true,2,true,1,,42
+"easy-corridor","showcase preset",3,3,0.2222,8,true,2,true,2,true,0,7,56
+"easy-corridor","showcase preset",3,3,0.2222,12,true,2,true,2,true,0,7,84
+"easy-corridor","showcase preset",3,3,0.2222,16,true,2,true,2,true,0,7,112
+"depth-matters-winding","showcase preset",4,4,0,0,true,6,false,,false,0,,0
+"depth-matters-winding","showcase preset",4,4,0,1,true,6,false,,false,2,,16
+"depth-matters-winding","showcase preset",4,4,0,2,true,6,false,,false,3,,32
+"depth-matters-winding","showcase preset",4,4,0,4,true,6,false,,false,3,,64
+"depth-matters-winding","showcase preset",4,4,0,6,true,6,true,6,true,1,,96
+"depth-matters-winding","showcase preset",4,4,0,8,true,6,true,6,true,0,7,128
+"depth-matters-winding","showcase preset",4,4,0,12,true,6,true,6,true,0,7,192
+"depth-matters-winding","showcase preset",4,4,0,16,true,6,true,6,true,0,7,256
+"limitation-island","showcase preset",3,3,0.3333,0,false,,false,,true,0,,0
+"limitation-island","showcase preset",3,3,0.3333,1,false,,false,,true,1,,6
+"limitation-island","showcase preset",3,3,0.3333,2,false,,false,,true,1,,12
+"limitation-island","showcase preset",3,3,0.3333,4,false,,false,,true,0,3,24
+"limitation-island","showcase preset",3,3,0.3333,6,false,,false,,true,0,3,36
+"limitation-island","showcase preset",3,3,0.3333,8,false,,false,,true,0,3,48
+"limitation-island","showcase preset",3,3,0.3333,12,false,,false,,true,0,3,72
+"limitation-island","showcase preset",3,3,0.3333,16,false,,false,,true,0,3,96
+"eval-adjacent","hand-constructed evaluation fixture",1,2,0,0,true,1,false,,false,0,,0
+"eval-adjacent","hand-constructed evaluation fixture",1,2,0,1,true,1,true,1,true,1,,2
+"eval-adjacent","hand-constructed evaluation fixture",1,2,0,2,true,1,true,1,true,0,2,4
+"eval-adjacent","hand-constructed evaluation fixture",1,2,0,4,true,1,true,1,true,0,2,8
+"eval-adjacent","hand-constructed evaluation fixture",1,2,0,6,true,1,true,1,true,0,2,12
+"eval-adjacent","hand-constructed evaluation fixture",1,2,0,8,true,1,true,1,true,0,2,16
+"eval-adjacent","hand-constructed evaluation fixture",1,2,0,12,true,1,true,1,true,0,2,24
+"eval-adjacent","hand-constructed evaluation fixture",1,2,0,16,true,1,true,1,true,0,2,32
+"eval-start-is-goal","hand-constructed evaluation fixture",1,1,0,0,true,0,true,0,true,0,,0
+"eval-start-is-goal","hand-constructed evaluation fixture",1,1,0,1,true,0,true,0,true,0,1,1
+"eval-start-is-goal","hand-constructed evaluation fixture",1,1,0,2,true,0,true,0,true,0,1,2
+"eval-start-is-goal","hand-constructed evaluation fixture",1,1,0,4,true,0,true,0,true,0,1,4
+"eval-start-is-goal","hand-constructed evaluation fixture",1,1,0,6,true,0,true,0,true,0,1,6
+"eval-start-is-goal","hand-constructed evaluation fixture",1,1,0,8,true,0,true,0,true,0,1,8
+"eval-start-is-goal","hand-constructed evaluation fixture",1,1,0,12,true,0,true,0,true,0,1,12
+"eval-start-is-goal","hand-constructed evaluation fixture",1,1,0,16,true,0,true,0,true,0,1,16
+"eval-open-3x3","hand-constructed evaluation fixture",3,3,0,0,true,4,false,,false,0,,0
+"eval-open-3x3","hand-constructed evaluation fixture",3,3,0,1,true,4,false,,false,2,,9
+"eval-open-3x3","hand-constructed evaluation fixture",3,3,0,2,true,4,false,,false,3,,18
+"eval-open-3x3","hand-constructed evaluation fixture",3,3,0,4,true,4,true,4,true,1,,36
+"eval-open-3x3","hand-constructed evaluation fixture",3,3,0,6,true,4,true,4,true,0,5,54
+"eval-open-3x3","hand-constructed evaluation fixture",3,3,0,8,true,4,true,4,true,0,5,72
+"eval-open-3x3","hand-constructed evaluation fixture",3,3,0,12,true,4,true,4,true,0,5,108
+"eval-open-3x3","hand-constructed evaluation fixture",3,3,0,16,true,4,true,4,true,0,5,144
+"eval-detour-4x4","hand-constructed evaluation fixture",4,4,0.375,0,true,6,false,,false,0,,0
+"eval-detour-4x4","hand-constructed evaluation fixture",4,4,0.375,1,true,6,false,,false,1,,10
+"eval-detour-4x4","hand-constructed evaluation fixture",4,4,0.375,2,true,6,false,,false,1,,20
+"eval-detour-4x4","hand-constructed evaluation fixture",4,4,0.375,4,true,6,false,,false,1,,40
+"eval-detour-4x4","hand-constructed evaluation fixture",4,4,0.375,6,true,6,true,6,true,2,,60
+"eval-detour-4x4","hand-constructed evaluation fixture",4,4,0.375,8,true,6,true,6,true,0,8,80
+"eval-detour-4x4","hand-constructed evaluation fixture",4,4,0.375,12,true,6,true,6,true,0,8,120
+"eval-detour-4x4","hand-constructed evaluation fixture",4,4,0.375,16,true,6,true,6,true,0,8,160
+"eval-blocked-2x2","hand-constructed evaluation fixture",2,2,0.5,0,false,,false,,true,0,,0
+"eval-blocked-2x2","hand-constructed evaluation fixture",2,2,0.5,1,false,,false,,true,0,1,2
+"eval-blocked-2x2","hand-constructed evaluation fixture",2,2,0.5,2,false,,false,,true,0,1,4
+"eval-blocked-2x2","hand-constructed evaluation fixture",2,2,0.5,4,false,,false,,true,0,1,8
+"eval-blocked-2x2","hand-constructed evaluation fixture",2,2,0.5,6,false,,false,,true,0,1,12
+"eval-blocked-2x2","hand-constructed evaluation fixture",2,2,0.5,8,false,,false,,true,0,1,16
+"eval-blocked-2x2","hand-constructed evaluation fixture",2,2,0.5,12,false,,false,,true,0,1,24
+"eval-blocked-2x2","hand-constructed evaluation fixture",2,2,0.5,16,false,,false,,true,0,1,32
+"eval-dense-unreachable","hand-constructed evaluation fixture",4,4,0.375,0,false,,false,,true,0,,0
+"eval-dense-unreachable","hand-constructed evaluation fixture",4,4,0.375,1,false,,false,,true,1,,10
+"eval-dense-unreachable","hand-constructed evaluation fixture",4,4,0.375,2,false,,false,,true,1,,20
+"eval-dense-unreachable","hand-constructed evaluation fixture",4,4,0.375,4,false,,false,,true,1,,40
+"eval-dense-unreachable","hand-constructed evaluation fixture",4,4,0.375,6,false,,false,,true,0,6,60
+"eval-dense-unreachable","hand-constructed evaluation fixture",4,4,0.375,8,false,,false,,true,0,6,80
+"eval-dense-unreachable","hand-constructed evaluation fixture",4,4,0.375,12,false,,false,,true,0,6,120
+"eval-dense-unreachable","hand-constructed evaluation fixture",4,4,0.375,16,false,,false,,true,0,6,160
+"eval-narrow-5x5","hand-constructed evaluation fixture",5,5,0.28,0,true,8,false,,false,0,,0
+"eval-narrow-5x5","hand-constructed evaluation fixture",5,5,0.28,1,true,8,false,,false,1,,18
+"eval-narrow-5x5","hand-constructed evaluation fixture",5,5,0.28,2,true,8,false,,false,1,,36
+"eval-narrow-5x5","hand-constructed evaluation fixture",5,5,0.28,4,true,8,false,,false,1,,72
+"eval-narrow-5x5","hand-constructed evaluation fixture",5,5,0.28,6,true,8,false,,false,2,,108
+"eval-narrow-5x5","hand-constructed evaluation fixture",5,5,0.28,8,true,8,true,8,true,3,,144
+"eval-narrow-5x5","hand-constructed evaluation fixture",5,5,0.28,12,true,8,true,8,true,0,11,216
+"eval-narrow-5x5","hand-constructed evaluation fixture",5,5,0.28,16,true,8,true,8,true,0,11,288

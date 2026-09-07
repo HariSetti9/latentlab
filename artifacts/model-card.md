@@ -22,7 +22,7 @@ No learned parameters, weights, dataset, training, seed, or checkpoint. State up
 
 ## Evaluation
 
-Committed presets are swept over depths 0, 1, 2, 4, 6, 8, and 16. Unit tests cover validation, oracle correctness, recurrence semantics, deterministic serialization, non-mutation, preset outcomes, trace shape, and plateau behavior.
+A small hand-constructed reproducibility corpus contains the three showcase presets plus seven evaluation fixtures. All 10 run at depths 0, 1, 2, 4, 6, 8, 12, and 16. Unit tests cover validation, oracle correctness, recurrence semantics, deterministic serialization, non-mutation, preset outcomes, corpus breadth, trace shape, and plateau behavior. This is not a benchmark dataset and supports no population accuracy claim.
 
 ## Limitations
 

@@ -1,50 +1,54 @@
-# Phase 3 Experiment Protocol
+# Experiment Protocol
 
-## Pre-registered hypotheses
+## Purpose and hypotheses
 
-- H1: Because one synchronous update moves information at most one grid edge, a reachable goal at shortest distance `d` will first receive a distance value at update `d`.
-- H2: The recurrence and complete serialized trace will be identical for identical inputs because no random operation or external state is used.
-- H3: On a disconnected puzzle, the state will reach a fixed point; further requested updates will increase the defined compute proxy but will not change the state or prediction.
-- H4: BFS and recurrence agree after sufficient depth on the committed presets, while shallow depth can yield an incomplete (apparently unreachable) estimate.
+Test a narrow educational claim: repeated synchronous local updates can propagate task-relevant state farther before an answer is read, while excess updates can eventually stop changing that state.
 
-These hypotheses were recorded before treating the final fixture sweep as evidence. Development observations used to build tests are not presented as blinded evaluation.
+- H1: A reachable goal at BFS distance `d` first receives a distance value at update `d`.
+- H2: Identical puzzle/depth inputs produce identical serialized traces.
+- H3: A finite disconnected component reaches a fixed point; later requested updates change neither state nor prediction.
+- H4: Recurrence and separate BFS agree after sufficient depth; shallow depth may remain incomplete.
 
-## Task and state
+These were recorded before Phase 3's final fixture sweep. They are test conditions, not assumed results.
 
-Each fixture is a rectangular four-neighbor grid. `0` is traversable and `1` is a wall. The recurrent state stores `-1` for unknown/unreached and a non-negative earliest-known distance for reached cells. Step zero initializes only the start to distance zero.
+## Input space and presets
 
-## Evaluation
+Rectangular four-neighbor grids use `0` for traversable cells and `1` for walls. Inputs contain in-bounds traversable start and goal coordinates. Phase 6's hand-constructed corpus contains 10 fixtures (3 showcases plus 7 evaluation fixtures), sizes 1×1 through 5×5, reachable/unreachable cases, distances 0–8, and obstacle densities 0–0.5.
 
-Run:
+- Easy: `easy-corridor`; intended shallow success.
+- Depth Matters: `depth-matters-winding`; intended shallow incompleteness then deeper success.
+- Limitation: `limitation-island`; intended unreachable fixed-point saturation.
 
-```sh
-pnpm test
-pnpm evaluate
-pnpm find:puzzles
-```
+`scripts/verify-presets.ts` computes these behaviors from engine output. It does not modify the solver.
 
-The fixed sweep uses all committed presets at depths 0, 1, 2, 4, 6, 8, and 16. For every item it records the estimate, independently computed BFS answer, correctness, final-step changes, stable step when observed, and compute proxy.
+## Recurrent depths and reference oracle
 
-## Independence
-
-`oracle.ts` uses a FIFO queue, visited/predecessor map, and path reconstruction. `recurrent-engine.ts` uses synchronous whole-grid local state transforms. The engine never imports or calls the oracle. `trace.ts` invokes both as sibling computations only to annotate evaluation traces.
-
-## Determinism
-
-There is no randomness, training, floating-point learned parameter, API, or hardware-dependent branch. “Same seed” is therefore vacuous in Phase 3: no seed is accepted because it would be decorative. Puzzle generation enumerates integer wall masks in ascending order.
+Every fixture runs at depths `0, 1, 2, 4, 6, 8, 12, 16`: 80 deterministic cases. `oracle.ts` uses BFS with its own queue, visited/predecessor tracking, and path reconstruction. `recurrent-engine.ts` does not import the oracle; `trace.ts` invokes both as sibling computations.
 
 ## Metrics
 
-- Correctness requires matching oracle reachability and, when reachable, its shortest distance.
-- Changed-state count is the number of cells whose stored value differs from the previous step.
-- Convergence delta is changed-state count divided by traversable-cell count.
-- Stable step is the first executed update with zero changed cells.
-- Compute proxy is requested updates multiplied by traversable cells. It is not elapsed time, FLOPs, energy, or price.
+Each case records grid dimensions, obstacle density, depth, oracle/predicted reachability and distance, correctness, final-step changed cells, first observed stable step, and operation proxy. Definitions and non-claims are in `docs/METRICS.md`.
 
-## Timing
+## Procedure
 
-The evaluator prints process timing only as a diagnostic and explicitly excludes it from product claims. Browser interaction latency will be measured under the Phase 4 QA protocol with warm/cold conditions and target hardware recorded.
+1. Validate each committed fixture.
+2. Compute the BFS reference.
+3. Initialize recurrent state and apply exactly the requested synchronous updates.
+4. Compare final prediction with BFS.
+5. Serialize ordered JSON and CSV outputs.
+6. Run preset assertions and tests.
+7. Hash deterministic artifacts and their generating sources.
 
-## Limitations
+## Expected conditions versus observed results
 
-This is designed recurrence, not a trained neural network. It deterministically performs local distance propagation and therefore cannot demonstrate representation learning, language reasoning, in-context learning, calibrated confidence, or BDH/BDH-CQ behavior. The disconnected limitation demonstrates useful saturation - not an incorrect convergence or degradation in intelligence.
+Expected: depth below a reachable goal's shortest distance remains incomplete; sufficient depth agrees with BFS; disconnected finite components stabilize; identical runs serialize identically.
+
+Observed: generated Phase 6 artifacts contain 80 cases across 10 fixtures. Easy succeeds at depth 2, Depth Matters is incomplete at 1/2/4 and succeeds at 6, and Limitation stabilizes at step 3 with no later state change. These are computed outputs; verification fails if they drift.
+
+## Failure and limitation criteria
+
+Verification fails for invalid fixtures, nondeterministic reruns, any corpus fixture disagreeing with BFS at depth 16, or showcase semantic drift. Shallow incompleteness is an expected bounded-compute outcome, not benchmark error. This corpus is small and hand-constructed; no population accuracy or learned-model performance inference is valid.
+
+## Reproduction and artifacts
+
+Run `pnpm reproduce`. It writes `evaluation-results.json`, `evaluation-results.csv`, `metrics.json`, `preset-verification.json`, `checksums.txt`, and volatile `reproduction-report.json`, all described in `artifacts/MANIFEST.md`.

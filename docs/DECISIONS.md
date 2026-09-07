@@ -77,3 +77,15 @@ This log is append-only in spirit: superseded decisions remain recorded with the
 - Status: accepted
 - Decision: State that the paper reports a black-box audit involving paper co-authors and that this review found no unrelated third-party reproduction.
 - Why: “Independent” without that qualification would overstate the evidence.
+
+## D-013: Package a small corpus, not a benchmark
+
+- Status: accepted
+- Decision: Evaluate 10 transparent fixtures at 8 depths and retain item-level outputs without a headline accuracy percentage.
+- Why: The corpus tests reproducibility and boundary behavior, but its hand construction does not support population inference.
+
+## D-014: Separate deterministic artifacts from environment reports
+
+- Status: accepted
+- Decision: Hash evaluation, preset reports, and generating sources; exclude screenshots and the timestamped reproduction report.
+- Why: Deterministic integrity should not be invalidated by honest environment metadata.
