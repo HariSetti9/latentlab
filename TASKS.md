@@ -21,9 +21,9 @@ Legend: `[x]` complete, `[ ]` pending, `[!]` blocked on user/external authorizat
 
 ## Phase 2 - Product and learning journey
 
-- [ ] Write product spec and exact guided actions/consequences.
-- [ ] Write text wireframes and screen-to-rubric review.
-- [ ] Define accessibility, mobile, privacy, and performance budgets.
+- [x] Write product spec and exact guided actions/consequences.
+- [x] Write text wireframes and screen-to-rubric review.
+- [x] Define accessibility, mobile, privacy, and performance budgets.
 
 ## Phase 3 - Computational substrate
 
