@@ -59,3 +59,21 @@ This log is append-only in spirit: superseded decisions remain recorded with the
 - Status: accepted
 - Decision: Place a validated 4x4 editor after the guided comparison.
 - Why: It makes the substrate reusable without delaying the default one-minute learning path.
+
+## D-010: Treat BDH-CQ as a conceptual connection, not an implementation target
+
+- Status: accepted
+- Decision: Connect the toy only through repeated internal computation; compare state, learning, outputs, and evidence explicitly.
+- Why: BDH-CQ's paper distinguishes recurrent contextual memory from a latent query workspace, while the toy has neither learned mechanism.
+
+## D-011: Use typed research data and an original simplified diagram
+
+- Status: accepted
+- Decision: Source cards, claims, and comparison rows live in `src/research/`; the UI diagram is an original text/CSS synthesis.
+- Why: This makes citations testable, avoids copying paper graphics, and prevents research copy from scattering through JSX.
+
+## D-012: Do not call the BDH-CQ audit unrelated replication
+
+- Status: accepted
+- Decision: State that the paper reports a black-box audit involving paper co-authors and that this review found no unrelated third-party reproduction.
+- Why: “Independent” without that qualification would overstate the evidence.

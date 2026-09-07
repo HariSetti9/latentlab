@@ -33,7 +33,7 @@ The connection is conceptual, not an implementation mapping. LATENTLAB's planned
 
 - No independent BDH-CQ reproduction has been verified for this project.
 - We have not reproduced the ARC-AGI-1 evaluation, cost calculation, or claimed Pareto comparison.
-- Abstract review is sufficient for the narrow learner-facing mechanism statements above, but any equation, detailed ablation, or diagram requires full-text section and license review before use.
+- Phase 5 full-text review supports the narrow learner-facing mechanism statements. Exact proprietary BDH-CQ updates remain unknown; no paper figure or equation is reused.
 - The toy cannot establish how BDH-CQ representations encode concepts or whether more latent steps improve arbitrary tasks.
 
 ## Module learning objective
@@ -42,4 +42,4 @@ After the in-flow module, the learner can say: “My interaction repeated a tran
 
 ## Visual plan
 
-Use an original three-column mechanism comparison drawn from text, not a copied paper figure. Show `input -> repeated internal updates -> answer` as a generic conceptual diagram and list the architectural differences beside it. No source equation or figure is approved for reuse at this stage.
+The application uses an original three-lane mechanism map drawn from reviewed text: explicit-token reasoning, the transparent toy, and BDH-CQ as described. It labels itself simplified and never presents a paper figure as project-owned work.

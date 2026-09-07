@@ -25,6 +25,7 @@ The comparison runs the same depth-sensitive puzzle at depths 2 and 6. The sandb
 - `GuidedJourney`: five concise prompts; it changes learning/navigation state, not results.
 - `SandboxGrid`: validated 4x4 editor using the same engine and oracle.
 - `SelfCheck`: three local comprehension checks and an unpersisted explain-back prompt.
+- `ResearchModule`: typed, primary-sourced comparison; real toy-depth mapping; original mechanism diagram; evidence boundaries; source cards.
 
 ## Visual encoding
 
@@ -50,6 +51,8 @@ The encoding uses symbols, labels, numerals, outlines, and patterns in addition 
 | Stable step | first zero-change update from the trace |
 
 No confidence, probability, FLOP count, latency claim, or hidden semantic interpretation is shown.
+
+Research copy is data-backed by `src/research/`. `papers.ts` is the canonical UI bibliography, `claims.ts` binds claims to source IDs and caveats, and `comparisons.ts` supplies the table. The module can invoke the existing toy engine, but research data never enters core computation.
 
 ## React quality review
 

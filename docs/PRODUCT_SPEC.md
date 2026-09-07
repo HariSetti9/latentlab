@@ -117,3 +117,7 @@ No login, cookies, analytics, personal-data collection, or remote inference. Sel
 ## Phase 4 implementation note
 
 Implemented as a single-page React explainer with five guided stops, live default depth-sensitive fixture, trace playback, independent-reference comparison, convergence chart, shallow/deeper comparison, computed limitation callout, and a secondary validated 4x4 sandbox. Deterministic screenshot routes accept `fixture` and `depth` query parameters. See `UI_ARCHITECTURE.md` and `ACCESSIBILITY.md`.
+
+## Phase 5 research-module note
+
+The evidence transition is now a substantive in-flow module. It reruns the real toy from a second depth control, maps that interaction to an original simplified diagram, compares the toy with BDH and BDH-CQ by state/repetition/learning/output/evidence, and provides full primary-source cards. A persistent warning states non-equivalence before any published-system explanation.

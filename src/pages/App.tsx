@@ -6,6 +6,7 @@ import { ExperimentSummary } from '../components/ExperimentSummary';
 import { GridVisualizer } from '../components/GridVisualizer';
 import { GuidedJourney } from '../components/GuidedJourney';
 import { SandboxGrid } from '../components/SandboxGrid';
+import { ResearchModule } from '../components/ResearchModule';
 import { SelfCheck } from '../components/SelfCheck';
 import { TracePlayer } from '../components/TracePlayer';
 import { depthMattersPreset, easyPreset, limitationPreset } from '../core/presets';
@@ -88,7 +89,7 @@ export function App() {
         <SandboxGrid />
         <SelfCheck />
 
-        <section className="bdh-transition" id="evidence"><div className="section-kicker">Next: published systems</div><h2>What does this toy have to do with frontier architectures?</h2><p>This substrate demonstrates iterative hidden-state computation. It is <strong>not BDH or BDH-CQ</strong>. The next section will compare this limited analogy with published recurrent and latent-reasoning systems.</p><div className="evidence-row"><span>LIVE: grid recurrence</span><span>REFERENCE: independent BFS</span><span>PUBLISHED: deferred to Phase 5</span></div></section>
+        <ResearchModule />
       </main>
       <footer><span>LATENTLAB · DataForge 2026 Pathway</span><span>Local computation. No account. No analytics.</span></footer>
     </>

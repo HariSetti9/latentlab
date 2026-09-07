@@ -42,8 +42,8 @@ Legend: `[x]` complete, `[ ]` pending, `[!]` blocked on user/external authorizat
 
 ## Phase 5 - BDH/BDH-CQ integration
 
-- [ ] Implement primary-sourced in-flow comparison and evidence legend.
-- [ ] Run skeptical non-equivalence copy audit and citation scan.
+- [x] Implement primary-sourced in-flow comparison and evidence legend.
+- [x] Run skeptical non-equivalence copy audit and citation scan.
 
 ## Phase 6 - Evaluation and learning test
 
