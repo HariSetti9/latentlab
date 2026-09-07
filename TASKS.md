@@ -35,10 +35,10 @@ Legend: `[x]` complete, `[ ]` pending, `[!]` blocked on user/external authorizat
 
 ## Phase 4 - Interactive artifact
 
-- [ ] Scaffold lean Vite/React/TypeScript application.
-- [ ] Implement guided experience, sandbox, evidence drawer, self-check, and accessible state view.
-- [ ] Add unit/component/E2E/mobile/failure tests.
-- [ ] Pass lint, type-check, tests, build; capture desktop/mobile QA images.
+- [x] Scaffold lean Vite/React/TypeScript application.
+- [x] Implement guided experience, sandbox, Phase 5 evidence transition, and accessible state view.
+- [x] Add unit/component/mobile/failure tests; full E2E/self-check continues in Phase 5-6.
+- [x] Pass lint, type-check, tests, build; capture desktop/mobile QA images.
 
 ## Phase 5 - BDH/BDH-CQ integration
 

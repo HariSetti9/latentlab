@@ -78,3 +78,7 @@ Inline validation and always-visible text state summary.
 - Separate “About BDH” appendix page: breaks the causal learning flow.
 - Full-screen animated activation cloud: hard to interpret and inaccessible.
 - Blank editor landing page: delays the first meaningful observation.
+
+## Phase 4 implementation result
+
+The implemented responsive layout follows these wireframes with one refinement: on desktop, the guided prompt sits beside the opening question while the live lab begins immediately below; on mobile, both stack before the experiment. Estimate and BFS reference remain paired in the same summary panel at every verified width.

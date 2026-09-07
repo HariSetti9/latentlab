@@ -113,3 +113,7 @@ No login, cookies, analytics, personal-data collection, or remote inference. Sel
 | Generic KPI dashboard | None uniquely | None | Rejected |
 | Chatbot | None | Conflicts with scope | Rejected |
 | Decorative activation animation | None | Risks dishonesty | Rejected |
+
+## Phase 4 implementation note
+
+Implemented as a single-page React explainer with five guided stops, live default depth-sensitive fixture, trace playback, independent-reference comparison, convergence chart, shallow/deeper comparison, computed limitation callout, and a secondary validated 4x4 sandbox. Deterministic screenshot routes accept `fixture` and `depth` query parameters. See `UI_ARCHITECTURE.md` and `ACCESSIBILITY.md`.

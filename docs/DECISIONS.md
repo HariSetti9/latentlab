@@ -41,3 +41,21 @@ This log is append-only in spirit: superseded decisions remain recorded with the
 - Status: accepted
 - Decision: Phase 1 creates a primary-source ledger before technical claims or BDH copy are implemented.
 - Why: BDH/BDH-CQ terminology is niche and must be verified rather than inferred from names or secondary summaries.
+
+## D-007: Derive UI from experiment results
+
+- Status: accepted
+- Decision: React stores learner choices, not duplicated computation. The complete result is derived through `runExperiment`.
+- Why: Prevents stale UI state and makes every visible value traceable to Phase 3 code.
+
+## D-008: One small convergence chart
+
+- Status: accepted
+- Decision: Use a dependency-free SVG line of changed cells per real recurrent step.
+- Why: It makes propagation and the limitation fixed point visible without decorative telemetry.
+
+## D-009: Keep sandbox secondary but complete
+
+- Status: accepted
+- Decision: Place a validated 4x4 editor after the guided comparison.
+- Why: It makes the substrate reusable without delaying the default one-minute learning path.
