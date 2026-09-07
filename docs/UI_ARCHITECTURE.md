@@ -24,6 +24,7 @@ The comparison runs the same depth-sensitive puzzle at depths 2 and 6. The sandb
 - `ComparisonMode`: two engine runs over one input, with bounded trade-off copy.
 - `GuidedJourney`: five concise prompts; it changes learning/navigation state, not results.
 - `SandboxGrid`: validated 4x4 editor using the same engine and oracle.
+- `SelfCheck`: three local comprehension checks and an unpersisted explain-back prompt.
 
 ## Visual encoding
 

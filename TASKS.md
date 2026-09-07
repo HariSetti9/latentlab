@@ -36,7 +36,7 @@ Legend: `[x]` complete, `[ ]` pending, `[!]` blocked on user/external authorizat
 ## Phase 4 - Interactive artifact
 
 - [x] Scaffold lean Vite/React/TypeScript application.
-- [x] Implement guided experience, sandbox, Phase 5 evidence transition, and accessible state view.
+- [x] Implement guided experience, sandbox, self-check, Phase 5 evidence transition, and accessible state view.
 - [x] Add unit/component/mobile/failure tests; full E2E/self-check continues in Phase 5-6.
 - [x] Pass lint, type-check, tests, build; capture desktop/mobile QA images.
 

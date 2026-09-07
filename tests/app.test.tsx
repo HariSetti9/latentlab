@@ -87,4 +87,14 @@ describe('interactive learning experience', () => {
     render(<App />);
     expect(screen.getAllByTestId('state-grid')[0]).toHaveAccessibleName(/At recurrent step 4, 13 cells/);
   });
+
+  it('provides a three-question local self-check', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole('button', { name: 'The hidden state received more recurrent updates' }));
+    await user.click(screen.getByRole('button', { name: 'It independently evaluated the estimate' }));
+    await user.click(screen.getByRole('button', { name: 'Additional computation can saturate' }));
+    expect(screen.getByText(/3 of 3 correct/)).toBeVisible();
+    expect(screen.getByLabelText(/In one sentence/)).toBeVisible();
+  });
 });
