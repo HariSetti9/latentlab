@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pnpm install --frozen-lockfile
+      - run: python -m pip install -r requirements-docs.txt
+      - run: pnpm typecheck
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm check:citations
+      - run: pnpm check:links
+      - run: pnpm check:licenses
+      - run: pnpm check:hygiene
+      - run: pnpm reproduce
+      - run: pnpm build
+        env:
+          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+      - run: pnpm generate:pdfs && pnpm verify:pdfs
+      - run: git diff --exit-code -- docs/concept-summary.pdf docs/blog.pdf
+      - run: pnpm verify:release:pending

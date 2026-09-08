@@ -82,7 +82,7 @@ pnpm reproduce
 
 PDF regeneration additionally requires Python 3 and `pip install -r requirements-docs.txt`; set the `PYTHON` environment variable if Python is not on `PATH`.
 
-This regenerates evaluation artifacts, verifies preset semantics, runs 53 tests plus typecheck/lint/citation/hygiene checks and the production build, refreshes SHA-256 checksums, and writes an environment report. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md), [artifact manifest](artifacts/MANIFEST.md), and [test matrix](docs/TEST_MATRIX.md).
+This regenerates evaluation artifacts, verifies preset semantics, runs 58 tests plus typecheck/lint/citation/link/license/hygiene checks and the production build, refreshes SHA-256 checksums, and writes an environment report. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md), [artifact manifest](artifacts/MANIFEST.md), [test matrix](docs/TEST_MATRIX.md), and [CI workflow](.github/workflows/ci.yml).
 
 ## Limitations
 

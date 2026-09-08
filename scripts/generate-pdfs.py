@@ -9,6 +9,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.platypus import BaseDocTemplate, Frame, KeepTogether, PageTemplate, Paragraph, Spacer
+from reportlab.pdfgen.canvas import Canvas
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -19,6 +20,11 @@ LIME = colors.HexColor("#ddeb99")
 MUTED = colors.HexColor("#64716b")
 PAPER = colors.HexColor("#fffdf7")
 LINE = colors.HexColor("#d4d7cc")
+
+
+def invariant_canvas(filename, **kwargs):
+    kwargs["invariant"] = 1
+    return Canvas(filename, **kwargs)
 
 
 def clean(text: str) -> str:
@@ -63,6 +69,7 @@ def parse_markdown(path: Path, styles: dict[str, ParagraphStyle], compact: bool 
         elif stripped.startswith("- "):
             flush()
             story.append(Paragraph(inline(stripped[2:]), styles["bullet"], bulletText="-"))
+            story.append(Spacer(1, 0.8 * mm if compact else 1.4 * mm))
         else:
             paragraph.append(stripped)
     flush()
@@ -119,7 +126,7 @@ def build_concept():
     frame_width = (usable - gap) / 2
     frames = [Frame(14 * mm, 13 * mm, frame_width, A4[1] - 28 * mm, id="left", leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0), Frame(14 * mm + frame_width + gap, 13 * mm, frame_width, A4[1] - 28 * mm, id="right", leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)]
     doc.addPageTemplates(PageTemplate(id="concept", frames=frames, onPage=concept_page))
-    doc.build(parse_markdown(DOCS / "CONCEPT_SUMMARY.md", base_styles(compact=True), compact=True))
+    doc.build(parse_markdown(DOCS / "CONCEPT_SUMMARY.md", base_styles(compact=True), compact=True), canvasmaker=invariant_canvas)
 
 
 def build_blog():
@@ -128,7 +135,7 @@ def build_blog():
     frame = Frame(22 * mm, 17 * mm, A4[0] - 44 * mm, A4[1] - 36 * mm, id="body", leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
     doc.addPageTemplates(PageTemplate(id="blog", frames=[frame], onPage=blog_page))
     story = parse_markdown(DOCS / "BLOG.md", base_styles())
-    doc.build([KeepTogether(item) if isinstance(item, Paragraph) and item.style.name in {"H2", "H3"} else item for item in story])
+    doc.build([KeepTogether(item) if isinstance(item, Paragraph) and item.style.name in {"H2", "H3"} else item for item in story], canvasmaker=invariant_canvas)
 
 
 if __name__ == "__main__":

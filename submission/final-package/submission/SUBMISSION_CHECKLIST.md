@@ -15,12 +15,12 @@
 | Blog source/PDF | [PASS] | `docs/BLOG.md`, `docs/blog.pdf` |
 | Provenance/licenses/AI disclosure | [PASS] | Dedicated records and MIT license |
 | Desktop/mobile QA evidence | [PASS] | Curated deterministic screenshots and QA notes |
-| Deployment and CI configuration | [BLOCKED] | Phase 8 hardening pending |
+| Deployment and CI configuration | [PASS] | GitHub Actions workflow, configurable base path, and deployment runbook validated locally |
 | Public artifact opens without sign-in | [NEEDS USER ACTION] | Publish and verify in Phase 9 |
 | Public source repository opens | [NEEDS USER ACTION] | Publish and verify in Phase 9 |
 | Demo video opens | [NEEDS USER ACTION] | Record/upload using demo script |
 | README has final public/video URLs | [BLOCKED] | Requires publication and video URL |
-| Full external accessibility audit | [BLOCKED] | Phase 8 audit pending |
+| Full external accessibility audit | [BLOCKED] | Internal semantic/keyboard/reflow audit passed; native screen-reader, Firefox, and Safari coverage is unavailable locally and remains documented residual risk |
 | Final ZIP and SHA-256 | [BLOCKED] | Phase 10 after URLs/video; RC only now |
 | Unstop upload and confirmed submission | [NEEDS USER ACTION] | Human owner must upload/click Submit and verify confirmation |
 

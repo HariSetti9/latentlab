@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "pnpm verify:presets --write (scripts/verify-presets.ts)",
+  "passed": true,
+  "checks": {
+    "easy": {
+      "depth": 2,
+      "correct": true,
+      "oracleDistance": 2
+    },
+    "depthMatters": {
+      "shallowDepths": [
+        1,
+        2,
+        4
+      ],
+      "shallowIncomplete": true,
+      "solvedDepth": 6,
+      "oracleDistance": 6
+    },
+    "limitation": {
+      "requestedDepth": 16,
+      "stableAtStep": 3,
+      "unchangedAfterStability": true,
+      "reachable": false
+    }
+  }
+}

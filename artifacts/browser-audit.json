@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "baseURL": "http://127.0.0.1:4173/",
+  "browsers": [
+    {
+      "name": "Chrome",
+      "widths": [
+        {
+          "width": 360,
+          "status": "PASS",
+          "horizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "status": "PASS",
+          "horizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "status": "PASS",
+          "horizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "status": "PASS",
+          "horizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "status": "PASS",
+          "horizontalOverflow": false
+        }
+      ],
+      "interactions": "PASS",
+      "consoleErrors": []
+    },
+    {
+      "name": "Edge",
+      "widths": [
+        {
+          "width": 360,
+          "status": "PASS",
+          "horizontalOverflow": false
+        },
+        {
+          "width": 390,
+          "status": "PASS",
+          "horizontalOverflow": false
+        },
+        {
+          "width": 768,
+          "status": "PASS",
+          "horizontalOverflow": false
+        },
+        {
+          "width": 1024,
+          "status": "PASS",
+          "horizontalOverflow": false
+        },
+        {
+          "width": 1440,
+          "status": "PASS",
+          "horizontalOverflow": false
+        }
+      ],
+      "interactions": "PASS",
+      "consoleErrors": []
+    }
+  ],
+  "accessibility": {
+    "skipLinkFirst": true,
+    "structure": {
+      "h1Count": 1,
+      "mainCount": 1,
+      "navCount": 1,
+      "unnamedControls": 0,
+      "duplicateIds": [],
+      "unnamedGraphics": 0,
+      "tooSmallButtons": 0
+    },
+    "reducedMotion": true,
+    "textResizeOverflow": false
+  },
+  "residual": [
+    "Firefox and Safari require external environments; no compatible local executable was available."
+  ]
+}

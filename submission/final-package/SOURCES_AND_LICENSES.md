@@ -33,7 +33,7 @@ Versions and licenses were read from installed package metadata resolved by the 
 | Testing Library user-event | 14.6.7 | MIT | https://testing-library.com/docs/user-event/intro/ |
 | Testing Library jest-dom | 6.10.0 | MIT | https://github.com/testing-library/jest-dom |
 
-Transitive packages retain their own licenses. `pnpm licenses list --prod` should be rechecked in Phase 8.
+Transitive packages retain their own licenses. `pnpm check:licenses` inspected 266 resolved package/version records in Phase 8 and found no missing license metadata; the machine-readable inventory is `artifacts/license-audit.json`.
 
 ## Fonts, icons, assets, data, and reuse
 
