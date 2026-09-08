@@ -6,6 +6,12 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   verify:
@@ -18,7 +24,7 @@ jobs:
           version: 11.19.0
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: pnpm
       - uses: actions/setup-python@v5
         with:
@@ -37,6 +43,22 @@ jobs:
       - run: pnpm build
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
+      - if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
       - run: pnpm generate:pdfs && pnpm verify:pdfs
       - run: git diff --exit-code -- docs/concept-summary.pdf docs/blog.pdf
       - run: pnpm verify:release:pending
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
