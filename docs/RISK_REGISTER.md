@@ -12,8 +12,8 @@
 | R-08 | Deployment is brittle or deep links/assets break | Medium | High | Static build, correct Vite base, CI Pages preview, production smoke test | Open |
 | R-09 | Results cannot be reproduced | Medium | Critical | Deterministic fixtures, pinned package manager/lockfile, one-command checks, clean-copy reproduction | Mitigated in Phase 6; cross-platform Phase 8 gate remains |
 | R-10 | BDH or BDH-CQ primary material is unavailable/ambiguous | Medium | High | Primary papers reviewed; disclose proprietary gaps and reproduction boundary | Reduced; exact BDH-CQ updates remain undisclosed |
-| R-11 | PDF deliverables overflow or become unreadable | Medium | Medium | Render every PDF to PNG and visually inspect; one-page word/layout budget | Open |
+| R-11 | PDF deliverables overflow or become unreadable | Medium | Medium | Render every PDF to PNG and visually inspect; one-page word/layout budget | Mitigated in Phase 7: all four rendered pages visually inspected; concept is exactly one page |
 | R-12 | Public GitHub/deployment authentication unavailable | Medium | High | Prepare complete repository/config; request only the minimum user authorization at Phase 9; never invent URLs | Open |
 | R-13 | Demo video cannot be recorded in environment | High | Medium | Produce exact shot list/narration; mark recording/upload as user action | Open |
-| R-14 | License/provenance gaps | Medium | High | Inventory every code/data/weight/asset/font source and run dependency-license audit | Open |
-| R-15 | Scope creep harms the one-minute lesson | Medium | High | Every screen/control maps to a learning objective and rubric row; delete unmatched work | Open |
+| R-14 | License/provenance gaps | Medium | High | Inventory every code/data/weight/asset/font source and run dependency-license audit | Reduced in Phase 7: provenance, notices, dependency inventory, and AI disclosure committed; final audit remains |
+| R-15 | Scope creep harms the one-minute lesson | Medium | High | Every screen/control maps to a learning objective and rubric row; delete unmatched work | Mitigated in Phase 7 judge path and timed demo script |

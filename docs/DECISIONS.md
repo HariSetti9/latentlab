@@ -89,3 +89,15 @@ This log is append-only in spirit: superseded decisions remain recorded with the
 - Status: accepted
 - Decision: Hash evaluation, preset reports, and generating sources; exclude screenshots and the timestamped reproduction report.
 - Why: Deterministic integrity should not be invalidated by honest environment metadata.
+
+## D-015: Generate PDFs from reviewable Markdown
+
+- Status: accepted
+- Decision: Keep concept/blog source in Markdown and generate fixed judge PDFs with a checked-in ReportLab script and pinned document dependencies.
+- Why: Reviewable prose and repeatable output are easier to audit than hand-edited binary deliverables.
+
+## D-016: Keep the Phase 7 package explicitly provisional
+
+- Status: accepted
+- Decision: Assemble `submission/final-package/` without inventing public URLs, a video, a final ZIP, or submission confirmation; validate those gaps in pending mode.
+- Why: Publication and final submission require later deployment and human actions, while the current materials can still be frozen and audited.
