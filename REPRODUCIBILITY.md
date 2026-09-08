@@ -1,10 +1,10 @@
 # Reproducibility
 
-Prerequisites: Git and Node.js 20 or newer. `package.json` pins pnpm 11.19.0; activate it with Corepack.
+Prerequisites: Git and Node.js 22.13 or newer. `package.json` pins pnpm 11.19.0; activate it with Corepack.
 
 ```sh
-git clone <PUBLIC_REPOSITORY_URL_PENDING>
-cd <repository-directory>
+git clone https://github.com/HariSetti9/latentlab.git
+cd latentlab
 corepack enable
 corepack prepare pnpm@11.19.0 --activate
 pnpm install --frozen-lockfile
@@ -12,7 +12,7 @@ pnpm reproduce
 pnpm dev
 ```
 
-The URL placeholder is intentional until publication. In the provided checkout, begin with `pnpm install --frozen-lockfile`.
+In the provided checkout, begin with `pnpm install --frozen-lockfile`.
 
 `pnpm reproduce` regenerates the 80-case JSON/CSV evaluation, verifies the three showcase behaviors, runs tests/typecheck/lint/citation/link/license/hygiene checks and the production build, regenerates SHA-256 checksums, and writes an environment-stamped reproduction report. The report timestamp and commit are intentionally excluded from deterministic hashes.
 

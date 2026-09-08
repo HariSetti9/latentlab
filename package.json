@@ -14,6 +14,7 @@
     "check:hygiene": "node scripts/check-hygiene.mjs",
     "check:links": "node scripts/check-links.mjs",
     "check:licenses": "node scripts/check-licenses.mjs",
+    "create:zip": "node scripts/run-python.mjs scripts/create-final-release.py",
     "evaluate": "tsx scripts/evaluate.ts",
     "find:puzzles": "tsx scripts/find-interesting-puzzles.ts",
     "generate:pdfs": "node scripts/run-python.mjs scripts/generate-pdfs.py",

@@ -1,1 +1,0 @@
-LATENTLAB Phase 8 QA release candidate. Public URLs, demo video, strict validation, final ZIP, and submission remain pending. NOT FOR SUBMISSION.

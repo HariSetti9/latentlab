@@ -8,9 +8,10 @@ LATENTLAB is a one-minute interactive experiment about recurrent latent-space re
 
 | Deliverable | Link |
 |---|---|
-| Live interactive artifact | **PUBLIC URL - PHASE 9** |
-| Source repository | **PUBLIC URL - PHASE 9** |
-| Demo video | **VIDEO URL - USER ACTION** |
+| Live interactive artifact | [harisetti9.github.io/latentlab](https://harisetti9.github.io/latentlab/) |
+| Source repository | [github.com/HariSetti9/latentlab](https://github.com/HariSetti9/latentlab) |
+| Hosted CI | [GitHub Actions release workflow](https://github.com/HariSetti9/latentlab/actions/runs/34250952929) |
+| Demo video | **PENDING USER ACTION — record, upload, and verify public playback** |
 | One-page concept summary | [docs/concept-summary.pdf](docs/concept-summary.pdf) |
 | Blog | [docs/blog.pdf](docs/blog.pdf) |
 | Judge quickstart | [JUDGE_QUICKSTART.md](JUDGE_QUICKSTART.md) |
@@ -41,8 +42,8 @@ The React UI derives every result from the same typed engine used by tests and e
 
 ## Evidence and examples
 
-- **Depth sensitive:** `?fixture=depth-matters-winding&depth=4` is incomplete; depth 6 reaches the goal at BFS distance 6.
-- **Saturation:** `?fixture=limitation-island&depth=16` reaches a fixed point at step 3; later requested updates raise the operation proxy but do not alter state or output.
+- **Depth sensitive:** [depth 4](https://harisetti9.github.io/latentlab/?fixture=depth-matters-winding&depth=4) is incomplete; [depth 6](https://harisetti9.github.io/latentlab/?fixture=depth-matters-winding&depth=6) reaches the goal at BFS distance 6.
+- **Saturation:** [depth 16 limitation](https://harisetti9.github.io/latentlab/?fixture=limitation-island&depth=16) reaches a fixed point at step 3; later requested updates raise the operation proxy but do not alter state or output.
 - **Reference:** BFS is implemented separately and is never consumed by recurrent inference.
 - **Evaluation:** a small hand-constructed reproducibility corpus covers 10 fixtures at 8 depths (80 item-level cases). It is not a benchmark and supports no population accuracy headline.
 
@@ -68,7 +69,7 @@ The browser never reads committed evaluation artifacts to determine live outcome
 
 ## Setup and reproduction
 
-Requirements: Node.js 20+ and pnpm 11.19.0.
+Requirements: Node.js 22.13+ and pnpm 11.19.0.
 
 ```sh
 corepack prepare pnpm@11.19.0 --activate

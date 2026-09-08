@@ -25,9 +25,9 @@ for (const directory of ['docs', 'research', 'artifacts', 'submission']) {
   await mkdir(new URL(`source/${directory}/`, output), { recursive: true });
   for (const entry of await readdir(new URL(`${directory}/`, root), { withFileTypes: true })) {
     if (directory === 'artifacts' && ['browser-audit.json', 'package-dry-run.json', 'reproduction-report.json'].includes(entry.name)) continue;
-    if (entry.isFile()) await cp(new URL(`${directory}/${entry.name}`, root), new URL(`source/${directory}/${entry.name}`, output));
+    if (entry.isFile() && !(directory === 'submission' && entry.name === 'FINAL_RELEASE.md')) await cp(new URL(`${directory}/${entry.name}`, root), new URL(`source/${directory}/${entry.name}`, output));
   }
 }
 for (const file of ['README.md', 'JUDGE_QUICKSTART.md', 'LICENSE', 'SOURCES_AND_LICENSES.md', 'THIRD_PARTY_NOTICES.md', 'REPRODUCIBILITY.md', 'requirements-docs.txt']) await cp(new URL(file, root), new URL(`source/${file}`, output));
-await writeFile(new URL('RELEASE_CANDIDATE.txt', output), 'LATENTLAB Phase 8 QA release candidate. Public URLs, demo video, strict validation, final ZIP, and submission remain pending. NOT FOR SUBMISSION.\n', 'utf8');
-console.log(`Assembled Phase 8 release candidate with ${copies.length + 1} explicit files plus source snapshot directories.`);
+await writeFile(new URL('RELEASE.txt', output), 'LATENTLAB DataForge 2026 final release package. Demo video and Unstop submission remain explicit user actions.\n', 'utf8');
+console.log(`Assembled final release package with ${copies.length + 1} explicit files plus source snapshot directories.`);

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "label": "NOT_FOR_SUBMISSION",
+  "label": "FINAL_RELEASE",
   "fileCount": 153,
-  "requiredFiles": 13,
+  "requiredFiles": 14,
   "forbiddenEntries": 0,
   "localPathsOrSecrets": 0
 }

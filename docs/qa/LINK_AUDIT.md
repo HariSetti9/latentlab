@@ -9,7 +9,7 @@
 | S2 Coconut | VALID | Live arXiv abstract page and title verified 2026-09-08 |
 | S3 BDH | VALID | Live arXiv abstract page and title verified 2026-09-08 |
 | S4 BDH-CQ | VALID | Live arXiv abstract page and title verified 2026-09-08 |
-| GitHub/live artifact | PENDING PHASE 9 | Explicit placeholders; not treated as dead links |
+| GitHub/live artifact | VALID | Public repository, Pages root, three fixture URLs, Evidence anchor, and hosted CI run verified 2026-09-08 |
 | Demo video | USER ACTION | Explicit placeholder; not treated as a dead link |
 
 No unnoticed invalid link was found. Network validation is point-in-time; external availability remains outside repository control.

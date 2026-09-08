@@ -99,7 +99,7 @@ This log is append-only in spirit: superseded decisions remain recorded with the
 ## D-016: Keep the Phase 7 package explicitly provisional
 
 - Status: accepted
-- Decision: Assemble `submission/final-package/` without inventing public URLs, a video, a final ZIP, or submission confirmation; validate those gaps in pending mode.
+- Decision: During Phase 8, assemble `submission/final-package/` without inventing publication endpoints, a video, a final ZIP, or submission confirmation; the endpoints were verified and inserted in Phase 9.
 - Why: Publication and final submission require later deployment and human actions, while the current materials can still be frozen and audited.
 
 ## D-017: Prefer configurable static base paths

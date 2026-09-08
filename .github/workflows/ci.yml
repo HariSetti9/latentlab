@@ -50,7 +50,7 @@ jobs:
           path: dist
       - run: pnpm generate:pdfs && pnpm verify:pdfs
       - run: git diff --exit-code -- docs/concept-summary.pdf docs/blog.pdf
-      - run: pnpm verify:release:pending
+      - run: pnpm verify:release
 
   deploy:
     if: github.event_name == 'push'

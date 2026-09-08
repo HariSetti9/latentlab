@@ -61,7 +61,7 @@ CATEGORY: Craft / robustness / accessibility / provenance
 MAX POINTS: 10  
 CURRENT SELF-SCORE: 9  
 EVIDENCE: Chrome/Edge production matrix, five widths, 200% text check, semantic controls, skip link, reduced motion, focusable wide table, CI, configurable base path, provenance, AI disclosure, and 266-package license audit.  
-WEAKNESSES: Firefox, Safari, a native screen reader, and Linux CI are not locally available; CI execution awaits publication.  
+WEAKNESSES: Firefox, Safari, and a native screen reader are not locally available; hosted Ubuntu CI passes.
 JUDGE OBJECTION: “Was accessibility reduced to a score?”  
 EXACT FIX: Combined automated DOM gates with manual keyboard/visual review and recorded untested environments explicitly.  
 STATUS: PASS
@@ -86,7 +86,7 @@ STATUS: PASS
 | Learning effectiveness | 12/15 | 14/15 | No external learner study |
 | Interactive substrate | 14/15 | 15/15 | None after live/trace audit |
 | BDH/evidence | 8/10 | 9/10 | No reproduction or unrelated replication |
-| Craft/accessibility/provenance | 8/10 | 9/10 | Firefox/Safari/screen-reader/Linux CI untested locally |
+| Craft/accessibility/provenance | 8/10 | 9/10 | Firefox/Safari/native screen reader remain untested |
 | Concept summary | 9/10 | 10/10 | None after independent PDF reinspection |
 | **TOTAL** | **86/100** | **95/100** | Remaining deductions are evidence limits, not fixable polish defects |
 

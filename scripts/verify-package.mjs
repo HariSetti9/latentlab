@@ -5,6 +5,7 @@ const root = new URL('../submission/final-package/', import.meta.url);
 const required = [
   'README.md', 'JUDGE_QUICKSTART.md', 'docs/concept-summary.pdf', 'docs/blog.pdf',
   'submission/DEMO_SCRIPT.md', 'submission/DEMO_RECORDING_CHECKLIST.md', 'submission/RELEASE_GATE.md',
+  'RELEASE.txt',
   'source/package.json', 'source/pnpm-lock.yaml', 'source/src/core/recurrent-engine.ts',
   'source/src/core/oracle.ts', 'source/tests/oracle-independence.test.ts', 'source/.github/workflows/ci.yml',
 ];
@@ -30,12 +31,12 @@ for (const file of files) {
   const rel = file.pathname.slice(root.pathname.length);
   if (/C:[\\/]Users[\\/]/i.test(content)) failures.push(`${rel}: absolute Windows user path`);
   if (privateKeyPattern.test(content) || /ghp_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}/.test(content)) failures.push(`${rel}: secret-pattern match`);
-  if (/https?:\/\/(?:localhost|127\.0\.0\.1)(?=[:/]|$)/i.test(content)) failures.push(`${rel}: local URL in release candidate`);
+  if (/https?:\/\/(?:localhost|127\.0\.0\.1)(?=[:/]|$)/i.test(content)) failures.push(`${rel}: local URL in final package`);
 }
 if (failures.length) {
   console.error(failures.join('\n'));
   process.exit(1);
 }
-const report = { schemaVersion: 1, label: 'NOT_FOR_SUBMISSION', fileCount: files.length, requiredFiles: required.length, forbiddenEntries: 0, localPathsOrSecrets: 0 };
+const report = { schemaVersion: 1, label: 'FINAL_RELEASE', fileCount: files.length, requiredFiles: required.length, forbiddenEntries: 0, localPathsOrSecrets: 0 };
 await writeFile(new URL('../artifacts/package-dry-run.json', import.meta.url), `${JSON.stringify(report, null, 2)}\n`, 'utf8');
-console.log(`Package dry run PASS: ${files.length} files; source snapshot and required deliverables present; no forbidden entries, local URLs, paths, or secrets.`);
+console.log(`Final package verification PASS: ${files.length} files; source snapshot and required deliverables present; no forbidden entries, local URLs, paths, or secrets.`);

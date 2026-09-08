@@ -1,4 +1,4 @@
-# Phase 8 Release Gate
+# Phase 9 Release Gate
 
 Allowed states: `PASS`, `BLOCKED_BY_PHASE_9`, `USER_ACTION_REQUIRED`, `FAIL`.
 
@@ -12,19 +12,19 @@ Allowed states: `PASS`, `BLOCKED_BY_PHASE_9`, `USER_ACTION_REQUIRED`, `FAIL`.
 | Accessibility | PASS | Production semantic/keyboard/responsive gates; no critical observed defect |
 | Mobile | PASS | 360 and 390 px production checks after overflow fix |
 | Browser compatibility | PASS | Chrome and Edge tested; Firefox/Safari explicitly residual |
-| CI | PASS | Ubuntu workflow is present and syntax-checked; hosted execution awaits publication |
+| CI | PASS | Hosted Ubuntu verification and Pages deployment passed in run 34250952929 attempt 2 |
 | Clean reproduction | PASS | One-command workflow includes tests, build, citations, links, licenses, hygiene, artifacts |
 | PDFs | PASS | Independent Phase 8 structural/render/visual audit |
-| README | PASS | Judge-facing and deliverables-first; public links explicitly pending |
+| README | PASS | Judge-facing and deliverables-first; verified public repository, app, CI, and fixture links |
 | Provenance | PASS | Complete material ownership/source table |
 | AI disclosure | PASS | Transparent scope and human responsibility |
 | Licenses | PASS | 266 resolved package records; no missing metadata; assets covered |
 | Demo readiness | PASS | Script rehearsed against production UI; recording checklist added |
-| Public repository | BLOCKED_BY_PHASE_9 | Publish and verify signed-out access |
-| Live deployment | BLOCKED_BY_PHASE_9 | Deploy only after this phase |
+| Public repository | PASS | Public repository verified at `github.com/HariSetti9/latentlab` |
+| Live deployment | PASS | GitHub Pages root and deterministic fixtures verified without an app sign-in |
 | Video URL | USER_ACTION_REQUIRED | Record/upload and verify signed-out playback |
-| Strict release validation | BLOCKED_BY_PHASE_9 | Correctly rejects explicit pending markers; additionally requires three HTTPS final-link fields |
-| Final ZIP | BLOCKED_BY_PHASE_9 | Must be assembled only after verified URLs/video |
+| Strict release validation | PASS | Rejects publication placeholders/local URLs and permits only the exact pending-video user action |
+| Final ZIP | PASS | Deterministic archive, contents, and SHA-256 verified |
 | Unstop submission | USER_ACTION_REQUIRED | Human owner uploads/clicks Submit and verifies confirmation |
 
-Overall Phase 8 gate: **PASS**. There are no `FAIL` items. Publication and human-action states are intentionally non-fail blockers.
+Overall Phase 9 release gate: **PASS, with demo video and Unstop submission remaining USER_ACTION_REQUIRED**. There are no `FAIL` or `BLOCKED_BY_PHASE_9` items.
