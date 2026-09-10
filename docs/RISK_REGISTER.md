@@ -14,6 +14,6 @@
 | R-10 | BDH or BDH-CQ primary material is unavailable/ambiguous | Medium | High | Primary papers reviewed; disclose proprietary gaps and reproduction boundary | Reduced; exact BDH-CQ updates remain undisclosed |
 | R-11 | PDF deliverables overflow or become unreadable | Medium | Medium | Render every PDF to PNG and visually inspect; one-page word/layout budget | Mitigated in Phase 7: all four rendered pages visually inspected; concept is exactly one page |
 | R-12 | Public GitHub/deployment authentication unavailable | Medium | High | Prepare complete repository/config; request only the minimum user authorization at Phase 9; never invent URLs | Open |
-| R-13 | Demo video cannot be recorded in environment | High | Medium | Produce exact shot list/narration; mark recording/upload as user action | Open |
+| R-13 | Demo video cannot be recorded or opened publicly | High | Medium | Shot list, public upload, Incognito playback verification, and final link audit | Closed; public recording verified |
 | R-14 | License/provenance gaps | Medium | High | Inventory every code/data/weight/asset/font source and run dependency-license audit | Mitigated in Phase 8: 266 resolved package records, no missing metadata; assets/provenance audited |
 | R-15 | Scope creep harms the one-minute lesson | Medium | High | Every screen/control maps to a learning objective and rubric row; delete unmatched work | Mitigated in Phase 7 judge path and timed demo script |

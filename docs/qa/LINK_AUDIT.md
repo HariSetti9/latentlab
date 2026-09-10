@@ -10,6 +10,6 @@
 | S3 BDH | VALID | Live arXiv abstract page and title verified 2026-09-08 |
 | S4 BDH-CQ | VALID | Live arXiv abstract page and title verified 2026-09-08 |
 | GitHub/live artifact | VALID | Public repository, Pages root, three fixture URLs, Evidence anchor, and hosted CI run verified 2026-09-08 |
-| Demo video | USER ACTION | Explicit placeholder; not treated as a dead link |
+| Demo video | VALID | Public Google Drive file metadata and download access rechecked; release owner verified Incognito playback without sign-in |
 
 No unnoticed invalid link was found. Network validation is point-in-time; external availability remains outside repository control.

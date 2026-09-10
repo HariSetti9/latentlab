@@ -22,9 +22,9 @@ Allowed states: `PASS`, `BLOCKED_BY_PHASE_9`, `USER_ACTION_REQUIRED`, `FAIL`.
 | Demo readiness | PASS | Script rehearsed against production UI; recording checklist added |
 | Public repository | PASS | Public repository verified at `github.com/HariSetti9/latentlab` |
 | Live deployment | PASS | GitHub Pages root and deterministic fixtures verified without an app sign-in |
-| Video URL | USER_ACTION_REQUIRED | Record/upload and verify signed-out playback |
-| Strict release validation | PASS | Rejects publication placeholders/local URLs and permits only the exact pending-video user action |
+| Video URL | PASS | Public Google Drive viewer; release owner verified Incognito playback without sign-in |
+| Strict release validation | PASS | Requires real HTTPS repository, artifact, hosted CI, and demo-video fields; rejects placeholders/local URLs |
 | Final ZIP | PASS | Deterministic archive, contents, and SHA-256 verified |
 | Unstop submission | USER_ACTION_REQUIRED | Human owner uploads/clicks Submit and verifies confirmation |
 
-Overall Phase 9 release gate: **PASS, with demo video and Unstop submission remaining USER_ACTION_REQUIRED**. There are no `FAIL` or `BLOCKED_BY_PHASE_9` items.
+Overall final release gate: **PASS, with only Unstop submission remaining USER_ACTION_REQUIRED**. There are no `FAIL` or blocked deliverables.

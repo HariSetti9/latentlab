@@ -29,4 +29,6 @@
 - [ ] Insert the final URL in README and `submission/FINAL_LINKS.md`.
 - [ ] Run `pnpm verify:release` after every final URL is inserted.
 
-Final upload URL: **PENDING USER ACTION**
+Final upload URL: <https://drive.google.com/file/d/1oL_ZrvSv_TnQjrAhmGorMHfysxlVev8X/view>
+
+Public-access verification: PASS — manually verified by the release owner in an Incognito browser without sign-in; public viewer metadata and download access independently rechecked during final closure.

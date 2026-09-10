@@ -1,1 +1,1 @@
-LATENTLAB DataForge 2026 final release package. Demo video and Unstop submission remain explicit user actions.
+LATENTLAB DataForge 2026 final release package. Demo video: https://drive.google.com/file/d/1oL_ZrvSv_TnQjrAhmGorMHfysxlVev8X/view . Only Unstop submission remains a human action.

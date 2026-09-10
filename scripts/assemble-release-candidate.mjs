@@ -25,9 +25,10 @@ for (const directory of ['docs', 'research', 'artifacts', 'submission']) {
   await mkdir(new URL(`source/${directory}/`, output), { recursive: true });
   for (const entry of await readdir(new URL(`${directory}/`, root), { withFileTypes: true })) {
     if (directory === 'artifacts' && ['browser-audit.json', 'package-dry-run.json', 'reproduction-report.json'].includes(entry.name)) continue;
-    if (entry.isFile() && !(directory === 'submission' && entry.name === 'FINAL_RELEASE.md')) await cp(new URL(`${directory}/${entry.name}`, root), new URL(`source/${directory}/${entry.name}`, output));
+    const excludedSubmissionFile = directory === 'submission' && ['FINAL_RELEASE.md', 'DataForge2026_Pathway_LatentLab_Final.zip'].includes(entry.name);
+    if (entry.isFile() && !excludedSubmissionFile) await cp(new URL(`${directory}/${entry.name}`, root), new URL(`source/${directory}/${entry.name}`, output));
   }
 }
 for (const file of ['README.md', 'JUDGE_QUICKSTART.md', 'LICENSE', 'SOURCES_AND_LICENSES.md', 'THIRD_PARTY_NOTICES.md', 'REPRODUCIBILITY.md', 'requirements-docs.txt']) await cp(new URL(file, root), new URL(`source/${file}`, output));
-await writeFile(new URL('RELEASE.txt', output), 'LATENTLAB DataForge 2026 final release package. Demo video and Unstop submission remain explicit user actions.\n', 'utf8');
+await writeFile(new URL('RELEASE.txt', output), 'LATENTLAB DataForge 2026 final release package. Demo video: https://drive.google.com/file/d/1oL_ZrvSv_TnQjrAhmGorMHfysxlVev8X/view . Only Unstop submission remains a human action.\n', 'utf8');
 console.log(`Assembled final release package with ${copies.length + 1} explicit files plus source snapshot directories.`);

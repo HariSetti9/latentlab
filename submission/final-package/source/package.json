@@ -28,8 +28,7 @@
     "verify:pdfs": "node scripts/run-python.mjs scripts/verify-pdfs.py",
     "verify:package": "node scripts/verify-package.mjs",
     "verify:presets": "tsx scripts/verify-presets.ts",
-    "verify:release": "node scripts/verify-release.mjs",
-    "verify:release:pending": "node scripts/verify-release.mjs --allow-pending"
+    "verify:release": "node scripts/verify-release.mjs"
   },
   "dependencies": {
     "react": "^19.1.1",

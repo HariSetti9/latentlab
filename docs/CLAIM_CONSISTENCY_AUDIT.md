@@ -13,4 +13,4 @@ Compared README, concept brief, blog, demo narration, quickstart, provenance, ev
 | Evidence maturity | Consistent: live toy computation, reproducible precomputed corpus, published claims, and illustration are labeled separately |
 | Evaluation scope | Consistent: 10 hand-constructed fixtures / 80 cases; never presented as a benchmark or population estimate |
 
-No contradictory or unsupported final-package claim was found. Repository, hosted CI, and production evidence are public and verified; video evidence and submission confirmation remain explicit user actions.
+No contradictory or unsupported final-package claim was found. Repository, hosted CI, production, and video evidence are public and verified; only submission confirmation remains a human action.

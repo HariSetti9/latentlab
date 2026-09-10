@@ -9,7 +9,7 @@
 | 1:08-1:28 | "More compute is not guaranteed to keep helping. This disconnected case reaches a fixed point at step three." | Select `Limitation - More work, same answer`; choose depth 16. | Stable step 3; unchanged state/output despite larger operation proxy. |
 | 1:28-1:50 | "Published systems explore richer internal computation. BDH-CQ's authors distinguish recurrent contextual memory from an iterative latent query workspace. Our bridge is conceptual, not architectural." | Scroll to Evidence; show warning, diagram, comparison. | `Conceptual bridge, not a replica`; paper citations and evidence labels. |
 | 1:50-2:05 | "Learners can alter a small grid, answer three checks, and explain the result in their own words." | Briefly show sandbox and self-check. | Real editor, local feedback, explain-back prompt. |
-| 2:05-2:20 | "Everything important is reproducible: one command regenerates 80 item-level cases, verifies presets, runs 58 tests, builds, and checks evidence integrity." | Show README deliverables and `pnpm reproduce` command. | Verified public app, repository, CI, judge paths, and explicit pending video action. |
+| 2:05-2:20 | "Everything important is reproducible: one command regenerates 80 item-level cases, verifies presets, runs 58 tests, builds, and checks evidence integrity." | Show README deliverables and `pnpm reproduce` command. | Verified public app, repository, CI, video, and judge paths. |
 
 ## Recording notes
 
@@ -17,7 +17,7 @@
 - Start at <https://harisetti9.github.io/latentlab/?fixture=depth-matters-winding&depth=4>.
 - Keep pointer motion deliberate; do not accelerate or fake computation.
 - Record the terminal command separately only if readable in the final cut.
-- Replace the pending video marker after recording and verifying public playback.
+- Published recording: <https://drive.google.com/file/d/1oL_ZrvSv_TnQjrAhmGorMHfysxlVev8X/view> (approximately 1:51; release owner verified Incognito playback without sign-in).
 
 ## Phase 8 rehearsal record
 
