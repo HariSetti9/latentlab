@@ -2,7 +2,7 @@
 
 Public app: <https://harisetti9.github.io/latentlab/>
 Repository: <https://github.com/HariSetti9/latentlab>
-Hosted CI: <https://github.com/HariSetti9/latentlab/actions/runs/34250952929>
+Hosted CI: <https://github.com/HariSetti9/latentlab/actions/runs/34488924796>
 
 1. Open [Depth Matters at depth 4](https://harisetti9.github.io/latentlab/?fixture=depth-matters-winding&depth=4); observe incomplete estimate beside BFS.
 2. Change to 6, or open [Depth Matters at depth 6](https://harisetti9.github.io/latentlab/?fixture=depth-matters-winding&depth=6); observe agreement.

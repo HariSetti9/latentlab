@@ -10,7 +10,7 @@ LATENTLAB is a one-minute interactive experiment about recurrent latent-space re
 |---|---|
 | Live interactive artifact | [harisetti9.github.io/latentlab](https://harisetti9.github.io/latentlab/) |
 | Source repository | [github.com/HariSetti9/latentlab](https://github.com/HariSetti9/latentlab) |
-| Hosted CI | [GitHub Actions release workflow](https://github.com/HariSetti9/latentlab/actions/runs/34250952929) |
+| Hosted CI | [GitHub Actions final-closure workflow](https://github.com/HariSetti9/latentlab/actions/runs/34488924796) |
 | Demo video | [DATA Forge.mp4 — public Google Drive viewer](https://drive.google.com/file/d/1oL_ZrvSv_TnQjrAhmGorMHfysxlVev8X/view) |
 | One-page concept summary | [docs/concept-summary.pdf](docs/concept-summary.pdf) |
 | Blog | [docs/blog.pdf](docs/blog.pdf) |

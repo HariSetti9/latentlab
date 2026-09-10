@@ -18,7 +18,7 @@
 | Deployment and CI configuration | [PASS] | GitHub Actions workflow, configurable base path, and deployment runbook validated locally |
 | Public artifact opens without sign-in | [PASS] | GitHub Pages root and deterministic fixtures verified publicly |
 | Public source repository opens | [PASS] | Public `HariSetti9/latentlab` repository verified |
-| Hosted CI | [PASS] | GitHub Actions run 34250952929 attempt 2 passed verification and deployment |
+| Hosted CI | [PASS] | GitHub Actions final-closure run 34488924796 passed verification and deployment |
 | Demo video opens | [PASS] | Public Drive viewer; release owner verified Incognito playback without sign-in |
 | README has final public/video links | [PASS] | Verified repository, artifact, and video links inserted |
 | Full external accessibility audit | [BLOCKED] | Internal semantic/keyboard/reflow audit passed; native screen-reader, Firefox, and Safari coverage is unavailable locally and remains documented residual risk |

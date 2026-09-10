@@ -12,7 +12,7 @@ Allowed states: `PASS`, `BLOCKED_BY_PHASE_9`, `USER_ACTION_REQUIRED`, `FAIL`.
 | Accessibility | PASS | Production semantic/keyboard/responsive gates; no critical observed defect |
 | Mobile | PASS | 360 and 390 px production checks after overflow fix |
 | Browser compatibility | PASS | Chrome and Edge tested; Firefox/Safari explicitly residual |
-| CI | PASS | Hosted Ubuntu verification and Pages deployment passed in run 34250952929 attempt 2 |
+| CI | PASS | Hosted Ubuntu verification and Pages deployment passed in final-closure run 34488924796 |
 | Clean reproduction | PASS | One-command workflow includes tests, build, citations, links, licenses, hygiene, artifacts |
 | PDFs | PASS | Independent Phase 8 structural/render/visual audit |
 | README | PASS | Judge-facing and deliverables-first; verified public repository, app, CI, and fixture links |
